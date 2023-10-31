@@ -9,13 +9,6 @@
 
   > Section: S1
 		
-9972854652
-
-		9113041845
-
-	9165166290
-
-
   > Member-1: Adarsh Ranjan, 221CS103, adarshranjan.221cs103@nitk.edu.in
 
   > member-2: Rian Shane Pinto, 221CS144, rian.221cs144@nitk.edu.in	
@@ -33,6 +26,15 @@ This method aims to utilize as few resources as possible, such as fuel, time, an
 To reduce urban congestion, mitigate environmental impact, and improve overall urban mobility, a better parking solution is necessary. This solution addresses the increasing issue of limited parking spaces, optimizing their usage and reducing the amount of time spent searching for a parking space. This not only reduces traffic congestion but also reduces carbon emissions, thus contributing to a more environmentally friendly environment. 
 
 Furthermore, improved parking solutions may also contribute to economic growth by increasing the accessibility of businesses, thus enhancing the quality of life within cities and promoting sustainable urban development.
+¬¬Our Contribution:
+
+Our team aims to create a prototype that is designed to reduce human intervention in searching for parking spots. Thus, creating a more efficient, accurate, and potentially cost-effective solution.
+The project streamlines the parking process, making it more convenient for drivers.
+
+The project features a counter, to keep track of the vacant spots in the parking space. This creates a quicker flow of traffic in such parking spaces.
+
+Moreover, the position of the nearest available parking space is also displayed to the user at the entrance of the parking spot. This reduces the dependency on humans.
+
 
 </details>
 
@@ -56,6 +58,18 @@ Parking Slot Indication: The system guides the user to the designated parking sp
 
 Access Denied: If a user exceeds three incorrect attempts, the system denies access and alerts the user.
 ![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/3bc24703-c9ea-4e53-acfc-438d43a13644)
+
+Functional Table: 
+
+Component	Purpose
+Encoder:	Four priority encoders are utilized to detect the availability of parking slots for each vehicle type: truck, bus, 4-wheeler, and 2-wheeler. These priority encoders receive input signals from various parking spots and prioritize them based on vehicle type. The output of each priority encoder represents the availability status of parking spots for that specific vehicle type.
+
+Counter	Counter: created using T-flipflops is used to measure 
+the number of times the password has been inputted. When the count crosses three and no correct inputs have been made previously, then the circuit breaks down due to excessive failed attempts. A red LED is displayed to show an error
+
+Decoder:	A decoder is used in the password application. When the vehicle enters its vehicle code, it is translated into one of four valid vehicles, if its password matches the given password. This translation of password to vehicle is done using a decoder
+General circuits created using min terms 	1.	In the odd case when all parking slots are full, the signal is required to be sent at the parking entry, using a red led, indicating that the parking is full;
+2.	To convert the result of all encoders into a suitable parking spot with respect to the vehicle code inputted
 
 </details>
 
