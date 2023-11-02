@@ -1,0 +1,25 @@
+module mp_tb;
+reg [15:0]d;
+reg [3:0] w;
+wire [3:0] o;
+
+main rian(d,w,o);
+
+initial
+
+begin
+d=16'b1010011101100100;
+w=4'b0001;
+$display("P15 P14 P13 P12 | P11 P10 P9 P8 | P7 P6 P5 P4 | P3 P2 P1 P0 |    |BUS TRUCK 4W 2W | Nearest Appopriate Parking Spot |");
+$monitor("%d   %d   %d   %d   | %d   %d   %d   %d | %d  %d  %d  %d  | %d  %d  %d  %d  |    |      %b      |                 %d              |",d[15],d[14],d[13],d[12],d[11],d[10],d[9],d[8],d[7],d[6],d[5],d[4],d[3],d[2],d[1],d[0],w,o);
+#10;
+repeat(3)
+begin
+
+w=w*2;
+#10;
+end
+
+
+end
+endmodule

@@ -1,0 +1,150 @@
+
+module four_wheeler_module(input buzzer, 				
+						input entry,			
+						input exit,				
+						input [3:0]password,			
+						input clear,			
+						input clear_new,		
+						output reg gate_open,	
+						output reg gate_closed,	
+						output reg [1:0]count_entry,		
+						output reg [1:0]count_exit,			
+						output reg [12:1]num_in_park_slot,	
+						output reg [2:1]count_next_entry,	
+						output reg [2:1]count_next_exit,	
+						output reg [12:1]num_entry_next ,	
+						output reg [12:1]num_exit_next,		
+						output reg [2:1] count_prev_entry,	
+						output reg [2:1] count_prev_exit,	
+						output reg [0:3] occupied
+						);
+	
+always @(buzzer or password or entry or exit or clear or clear_new)
+	
+	begin
+			if(clear==1'b1)			
+			begin
+			count_exit=2'd0;
+			count_entry=2'd0;
+			occupied = 4'b0000;
+			num_in_park_slot=12'd0;
+			end
+			
+			else if(clear==1'b0)
+			begin
+				count_entry=count_next_entry;;
+			end
+			
+			else if(clear==1'b0)
+			begin
+				count_exit=count_next_exit;
+			end
+			
+
+			count_prev_entry=count_entry;
+			num_entry_next=num_in_park_slot+1;
+			count_prev_exit=count_exit;
+			num_exit_next=num_in_park_slot-1;
+
+		if(entry==1'b1)
+		begin
+			
+			if(count_entry==2'd3 &&(password==4'b0001|| password==4'b0010|| password==4'b0100|| password==4'b1000) )
+			begin
+				count_next_entry=2'd0;
+				if (password==4'b0001) occupied[0] = 1;
+				if (password==4'b0010) occupied[1] = 1;
+				if (password==4'b0100) occupied[2] = 1;
+				if (password==4'b1000) occupied[3] = 1;
+			end
+			else if(count_entry==2'd3 && (password!=4'b0001|| password!=4'b0010|| password!=4'b0100|| password!=4'b1000))
+				count_next_entry=2'd1;
+			else
+				count_next_entry=count_entry+1;
+			
+			
+			
+			if(count_entry<2'd3)
+			begin
+				if(buzzer==1'b1 && (password==4'b0001|| password==4'b0010|| password==4'b0100|| password==4'b1000))
+				begin
+					gate_open<=1'b1;
+					gate_closed<=1'b0;
+					num_in_park_slot=num_entry_next;
+					count_entry<=2'd0;
+					if (password==4'b0001) occupied[0] = 1;
+					if (password==4'b0010) occupied[1] = 1;
+					if (password==4'b0100) occupied[2] = 1;
+					if (password==4'b1000) occupied[3] = 1;
+						
+				end	
+				
+			end
+			else if(count_entry==2'd3)
+				begin
+					$display("\nIncorrect password for 3 times!\nYou cannot enter the parking slot.\nSORRY!!");
+				
+				end
+
+			if(buzzer==1'b0 ||(password!=4'b0001|| password!=4'b0010|| password!=4'b0100|| password!=4'b1000) )
+			begin
+				count_entry=count_next_entry;
+				gate_open=1'b0;
+				gate_closed=1'b1;
+				num_in_park_slot=num_in_park_slot;
+				count_entry<=1'd0;
+			end
+		end
+
+
+		if(exit==1'b1)
+		begin
+		
+			if(count_exit==2'd3 &&(password==4'b0001|| password==4'b0010|| password==4'b0100|| password==4'b1000) )
+			begin
+			count_next_exit=2'd0;
+			if (password==4'b0001) occupied[0] = 0;
+			if (password==4'b0010) occupied[1] = 0;
+			if (password==4'b0100) occupied[2] = 0;
+			if (password==4'b1000) occupied[3] = 0;
+			end
+			else if(count_exit==2'd3 && (password!=4'b0001|| password!=4'b0010|| password!=4'b0100|| password!=4'b1000))
+			count_next_exit=2'd1;
+			else
+			count_next_exit=count_exit+1;
+			
+			
+			
+			if(count_exit<2'd3)
+			begin
+				if(buzzer==1'b1 && (password==4'b0001|| password==4'b0010|| password==4'b0100|| password==4'b1000) )
+				begin
+					gate_open<=1'b1;
+					gate_closed<=1'b0;
+					num_in_park_slot=num_exit_next;
+					count_exit<=2'd0;
+					if (password==4'b0001) occupied[0] = 0;
+					if (password==4'b0010) occupied[1] = 0;
+					if (password==4'b0100) occupied[2] = 0;
+					if (password==4'b1000) occupied[3] = 0;
+						
+				end	
+				
+			end
+			else if(count_exit==2'd3)
+				begin
+					$display("\nIncorrect password for 3 times!\nYou cannot enter the parking slot.\nSORRY!!");
+				
+				end
+
+		if(buzzer==1'b0 ||(password!=4'b0001|| password!=4'b0010|| password!=4'b0100|| password!=4'b1000) )
+			begin
+				count_exit=count_next_exit;
+				gate_open=1'b0;
+				gate_closed=1'b1;
+				num_in_park_slot=num_in_park_slot;
+				count_exit=1'd0;
+			end
+		end
+	end
+endmodule

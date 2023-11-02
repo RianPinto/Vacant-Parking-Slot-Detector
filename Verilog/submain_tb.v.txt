@@ -1,0 +1,75 @@
+module four_wheeler_module_tb;
+reg buzzer; 						
+reg [3:0]password;								
+reg clear;							
+reg clear_new;						
+reg entry;							
+reg exit;							
+wire [2:1]count_entry;				
+wire [2:1]count_exit;				
+wire gate_open;						
+wire gate_closed;					
+wire [12:1]num_in_park_slot;		
+wire [2:1]count_next_entry;			
+wire [2:1]count_next_exit;			
+wire [12:1]num_entry_next;			
+wire [12:1]num_exit_next;			
+wire [2:1] count_prev_entry;		
+wire [2:1] count_prev_exit;			
+wire [0:3] occupied;
+four_wheeler_module instance_t(buzzer,entry,exit,password,clear,clear_new,gate_open,gate_closed,count_entry,count_exit,num_in_park_slot,count_next_entry,count_next_exit,num_entry_next,num_exit_next,count_prev_entry,count_prev_exit,occupied);
+initial
+begin
+	$dumpfile("four_wheeler_module_vcd");
+	$dumpvars;
+end
+
+initial begin
+	buzzer=1'b0;
+	clear=1'b1;
+	entry=1'b1;
+	exit=1'b0;
+	password=4'b0000;
+	#10
+		entry=1'b1;
+		exit=0;
+		clear=1'b0;
+		buzzer=1'b1;
+		password=4'b0001;
+	#10
+		entry=1'b1;
+		exit=0;
+		clear=1'b0;
+		buzzer=1'b1;
+		password=4'b0100;
+	#10
+		entry=1'b1;
+		exit=0;
+		clear=1'b0;
+		buzzer=1'b1;
+		password=4'b0011;
+	#10
+		entry=1'b1;
+		exit=0;
+		clear=1'b0;
+		buzzer=1'b1;
+		password=4'b1010;
+	#10
+		exit=1'b0;
+		entry=1;
+		clear=1'b0;
+		buzzer=1'b1;
+		password=4'b1011;
+	#10
+		exit=1;
+		entry=0;
+		buzzer=1'b1;
+		password=4'b0001;
+		clear=1'b0;
+		
+end 
+initial
+
+//$monitor("\nentry=%b\texit=%b\tBuzzer=%b\tPassword=%4b\tgate open=%b\tgate closed=%b\tnumber of vehicles in parking slot=%2d,occupied=%4b",entry,exit,buzzer,password,gate_open,gate_closed,num_in_park_slot,occupied);
+$monitor("\nentry=%b\texit=%b\tBuzzer=%b\tPassword=%4b\toccupied=%4b",entry,exit,buzzer,password,occupied);
+endmodule

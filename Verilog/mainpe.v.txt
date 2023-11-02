@@ -1,0 +1,65 @@
+module pe(d,o);
+
+input [3:0] d;
+output [1:0] o;
+
+assign o[1] = !d[0] & !d[1];
+assign o[0] = (!d[0]&d[1])|(!d[0]&!d[2]);
+
+
+
+endmodule
+
+module main(d,w,o);
+input [15:0]d;
+input [3:0] w;
+output [3:0] o;
+
+wire [1:0] t1;
+wire [1:0] t2;
+wire [1:0] t3;
+wire [1:0] t4;
+wire [1:0] t5;
+wire [3:0] d1;
+wire [3:0] d2;
+wire [3:0] d3;
+wire [3:0] d4;
+
+assign d1[0] = d[0];
+assign d1[1] = d[1];
+assign d1[2] = d[2];
+assign d1[3] = d[3];
+
+assign d2[0] = d[4];
+assign d2[1] = d[5];
+assign d2[2] = d[6];
+assign d2[3] = d[7];
+
+
+assign d3[0] = d[8];
+assign d3[1] = d[9];
+assign d3[2] = d[10];
+assign d3[3] = d[11];
+
+
+assign d4[0] = d[12];
+assign d4[1] = d[13];
+assign d4[2] = d[14];
+assign d4[3] = d[15];
+
+
+pe s1(d1,t1);
+pe s2(d2,t2);
+pe s3(d3,t3);
+pe s4(d4,t4);
+
+assign o[0] = (w[3]&t4[0])|(w[2]&t3[0])|(w[1]&t2[0])|(w[0]&t1[0]);
+assign o[1] = (w[3]&t4[1])|(w[2]&t3[1])|(w[1]&t2[1])|(w[0]&t1[1]);
+
+pe s5(w,t5);
+assign o[2] = (t5[0]);
+assign o[3] = (t5[1]);
+
+
+endmodule
+
