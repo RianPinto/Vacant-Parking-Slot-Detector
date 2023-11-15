@@ -205,7 +205,7 @@ end
 end
 endmodule
 '''
-Verilog for Password Chekcer and  Entry and Exit
+Verilog for Password Checker and  Entry and Exit
 '''
 module four_wheeler_module(input buzzer, 				
 						input entry,			
@@ -435,7 +435,7 @@ $monitor("\nentry=%b\texit=%b\tBuzzer=%b\tPassword=%4b\toccupied=%4b",entry,exit
 endmodule
 
 </details>
-'''
+
 <!-- Sixth Section -->
 ## References
 <details>
