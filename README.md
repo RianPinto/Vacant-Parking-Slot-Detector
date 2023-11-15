@@ -435,7 +435,7 @@ $monitor("\nentry=%b\texit=%b\tBuzzer=%b\tPassword=%4b\toccupied=%4b",entry,exit
 endmodule
 
 </details>
-
+```
 <!-- Sixth Section -->
 ## References
 <details>
