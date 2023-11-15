@@ -26,7 +26,8 @@ This method aims to utilize as few resources as possible, such as fuel, time, an
 To reduce urban congestion, mitigate environmental impact, and improve overall urban mobility, a better parking solution is necessary. This solution addresses the increasing issue of limited parking spaces, optimizing their usage and reducing the amount of time spent searching for a parking space. This not only reduces traffic congestion but also reduces carbon emissions, thus contributing to a more environmentally friendly environment. 
 
 Furthermore, improved parking solutions may also contribute to economic growth by increasing the accessibility of businesses, thus enhancing the quality of life within cities and promoting sustainable urban development.
-¬¬Our Contribution:
+
+###Our Contribution:
 
 Our team aims to create a prototype that is designed to reduce human intervention in searching for parking spots. Thus, creating a more efficient, accurate, and potentially cost-effective solution.
 The project streamlines the parking process, making it more convenient for drivers.
@@ -59,9 +60,7 @@ Parking Slot Indication: The system guides the user to the designated parking sp
 Access Denied: If a user exceeds three incorrect attempts, the system denies access and alerts the user.
 ![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/3bc24703-c9ea-4e53-acfc-438d43a13644)
 
-Functional Table: 
-
-Component	Purpose
+### Functionality
 Encoder:	Four priority encoders are utilized to detect the availability of parking slots for each vehicle type: truck, bus, 4-wheeler, and 2-wheeler. These priority encoders receive input signals from various parking spots and prioritize them based on vehicle type. The output of each priority encoder represents the availability status of parking spots for that specific vehicle type.
 
 Counter	Counter: created using T-flipflops is used to measure 
