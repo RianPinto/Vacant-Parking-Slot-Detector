@@ -433,10 +433,8 @@ initial
 //$monitor("\nentry=%b\texit=%b\tBuzzer=%b\tPassword=%4b\tgate open=%b\tgate closed=%b\tnumber of vehicles in parking slot=%2d,occupied=%4b",entry,exit,buzzer,password,gate_open,gate_closed,num_in_park_slot,occupied);
 $monitor("\nentry=%b\texit=%b\tBuzzer=%b\tPassword=%4b\toccupied=%4b",entry,exit,buzzer,password,occupied);
 endmodule
-
-</details>
 ```
-
+</details>
 <!-- Sixth Section -->
 ## References
 <details>
