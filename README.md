@@ -109,7 +109,7 @@ Main Priority Encoder Circuit:
 
   > Encoder-Decoder Verilog
 
-'''
+```
 module pe(d,o);
 
 input [3:0] d;
@@ -174,11 +174,11 @@ assign o[3] = (t5[1]);
 
 
 endmodule
-'''
+```
 
 
 Test Bench
-'''
+```
 module mp_tb;
 reg [15:0]d;
 reg [3:0] w;
@@ -204,9 +204,9 @@ end
 
 end
 endmodule
-'''
+```
 Verilog for Password Checker and  Entry and Exit
-'''
+```
 module four_wheeler_module(input buzzer, 				
 						input entry,			
 						input exit,				
