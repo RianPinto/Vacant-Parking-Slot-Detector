@@ -436,6 +436,7 @@ endmodule
 
 </details>
 ```
+
 <!-- Sixth Section -->
 ## References
 <details>
