@@ -27,7 +27,7 @@ To reduce urban congestion, mitigate environmental impact, and improve overall u
 
 Furthermore, improved parking solutions may also contribute to economic growth by increasing the accessibility of businesses, thus enhancing the quality of life within cities and promoting sustainable urban development.
 
-###Our Contribution:
+### Our Contribution:
 
 Our team aims to create a prototype that is designed to reduce human intervention in searching for parking spots. Thus, creating a more efficient, accurate, and potentially cost-effective solution.
 The project streamlines the parking process, making it more convenient for drivers.
