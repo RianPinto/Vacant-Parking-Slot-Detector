@@ -45,6 +45,8 @@ Moreover, the position of the nearest available parking space is also displayed 
 ## Working
 <details>
   <summary>Detail</summary>
+
+ ### Introduction:
 Our team aims to create a prototype that is designed to reduce human intervention in searching for parking spots. Thus, creating a more efficient, accurate, and potentially cost-effective solution.
 The project streamlines the parking process, making it more convenient for drivers.
 
