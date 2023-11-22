@@ -81,7 +81,8 @@ General circuits created using min terms 	1.	In the odd case when all parking sl
   
   > 
 Sample Encoder (1/4)
- 
+![Singular Priority Encoder](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/ced0259b-913f-4220-ba5a-51caae68d172)
+
 ![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/04319352-9b8e-4e8a-8c81-969cdc60f0d6)
 
 
