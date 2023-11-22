@@ -60,6 +60,8 @@ Access Granted: Upon successful verification, the system uses the decoder to det
 Parking Slot Indication: The system guides the user to the designated parking spot through LED indicators or display panels.
 
 Access Denied: If a user exceeds three incorrect attempts, the system denies access and alerts the user.
+
+### Flow of Simulation:
 ![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/ed260b44-41ba-439d-8f93-a2369e9fd7d7)
 
 
