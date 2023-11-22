@@ -60,7 +60,8 @@ Access Granted: Upon successful verification, the system uses the decoder to det
 Parking Slot Indication: The system guides the user to the designated parking spot through LED indicators or display panels.
 
 Access Denied: If a user exceeds three incorrect attempts, the system denies access and alerts the user.
-![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/3bc24703-c9ea-4e53-acfc-438d43a13644)
+![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/ed260b44-41ba-439d-8f93-a2369e9fd7d7)
+
 
 ### Functionality
 Encoder:	Four priority encoders are utilized to detect the availability of parking slots for each vehicle type: truck, bus, 4-wheeler, and 2-wheeler. These priority encoders receive input signals from various parking spots and prioritize them based on vehicle type. The output of each priority encoder represents the availability status of parking spots for that specific vehicle type.
@@ -81,22 +82,23 @@ General circuits created using min terms 	1.	In the odd case when all parking sl
   
   > 
 Sample Encoder (1/4)
-![Singular Priority Encoder](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/ced0259b-913f-4220-ba5a-51caae68d172)
+> ![Singular Priority Encoder](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/b861c55e-2d94-4aa1-a187-e9f0792b3f01)
+
 
 Password Input Segment:
 
-![Password Input Module](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/93b06a26-2195-4640-961e-bd006f6b4e1e)
+![Password Input Module](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/a719966f-f664-423f-942d-93fa991a085b)
 
 
 Password Input Along with Counter Check to Limit Password Trials:
 
-![Password Count Check](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/d4f4a352-3d12-4430-b287-187e766f45a4)
+![Password Count Check](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/df6aa258-636c-4401-ae24-cb83984ec030)
 
 
 
 Main Priority Encoder Circuit:
 
-![Main MultiEncoder Decoder Parking Display](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/3eaa5ac5-3c6b-4116-a322-b581f5757b20)
+![Main MultiEncoder Decoder Parking Display](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/41584575-ec24-4589-869a-a676b2233414)
 
 
 
