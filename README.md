@@ -83,22 +83,20 @@ General circuits created using min terms 	1.	In the odd case when all parking sl
 Sample Encoder (1/4)
 ![Singular Priority Encoder](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/ced0259b-913f-4220-ba5a-51caae68d172)
 
-![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/04319352-9b8e-4e8a-8c81-969cdc60f0d6)
-
-
-
 Password Input Segment:
-![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/fb72318e-b364-4aac-b073-68f53df723fe)
+
+![Password Input Module](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/93b06a26-2195-4640-961e-bd006f6b4e1e)
 
 
 Password Input Along with Counter Check to Limit Password Trials:
 
- ![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/aeeb1de0-3fa8-4842-8e89-af3acacadffe)
+![Password Count Check](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/d4f4a352-3d12-4430-b287-187e766f45a4)
+
 
 
 Main Priority Encoder Circuit:
 
- ![image](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/6b30bcfc-979e-4899-84f5-3daa05e6f410)
+![Main MultiEncoder Decoder Parking Display](https://github.com/RianPinto/Vacant-Parking-Slot-Detector/assets/139946131/3eaa5ac5-3c6b-4116-a322-b581f5757b20)
 
 
 
