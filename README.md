@@ -20,6 +20,8 @@
 ## Abstract
 <details>
   <summary>Detail</summary>
+
+### Introduction:
   To accomplish faster, easier, and denser parking of automobiles during the majority of the time they remain inactive, smart parking combines technology and human ingenuity. 
 This method aims to utilize as few resources as possible, such as fuel, time, and space.
 
